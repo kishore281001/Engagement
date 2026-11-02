@@ -1,0 +1,8 @@
+{
+  "name": "natarajan-aarthi-engagement-invitation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tamil and English engagement invitation with dimensional doors and scratch-to-reveal card",
+  "scripts": {"start": "node server.mjs", "dev": "node server.mjs", "test": "node --test tests/travel-links.test.cjs"},
+  "engines": {"node": ">=18"}
+}

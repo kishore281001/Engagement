@@ -1,0 +1,17 @@
+/* The closing film uses its original colours on a matching ivory surface. */
+#thanks{--gold:#98773c;--bright:#18383e;--muted:#65736a;--line:#987a4540;background:#f4ecdb;color:#1a383d;border-top:1px solid #bd9e63;padding-top:50px}
+#thanks .section-number{color:#8b7959;border-color:#987a4540}
+#thanks .thanks-copy h2{font-size:clamp(37px,4.2vw,59px);color:#1a383d}
+#thanks .thanks-copy .eyebrow{color:#8a6c36}
+#thanks .hands-stage{width:100%;max-width:680px;min-height:0;margin:34px auto 30px;padding:12px;border:1px solid #b89c634a;outline:1px solid #b89c6320;outline-offset:5px;background:#f4ecdb;box-shadow:0 20px 50px #644b1c12;overflow:hidden}
+#thanks #handsVideo{width:100%;display:block;background:#f4ecdb;filter:none;transform:none;mask-image:none;-webkit-mask-image:none}
+#thanks .hands-glow{display:none}
+#thanks .replay{width:32px;height:32px;bottom:20px;right:20px;border:1px solid #a7894e66;background:#f4ecdbe8;color:#795d2c;box-shadow:0 3px 12px #5a45251a}
+#thanks .thanks-text{color:#65736a;font-size:13px;max-width:430px}
+#thanks .signature{color:#896b35}
+#thanks>.outline-button{background:transparent;color:#26434a;border-color:#a589514d}
+#thanks>.outline-button:hover{background:#eadfc8;border-color:#98773c}
+#thanks footer{color:#788075;border-color:#987a4540}
+#thanks footer a{color:#896b35}
+html[lang=ta] #thanks .thanks-copy h2{font-size:clamp(27px,3vw,41px);line-height:1.65}
+@media(max-width:700px){#thanks{padding-top:35px}#thanks .thanks-copy h2{font-size:37px}#thanks .hands-stage{width:100%;margin:28px auto 26px;padding:5px;outline-offset:3px;box-shadow:0 10px 28px #644b1c12}#thanks .replay{width:28px;height:28px;bottom:12px;right:12px;font-size:18px}#thanks .thanks-text{font-size:12px}html[lang=ta] #thanks .thanks-copy h2{font-size:27px}}

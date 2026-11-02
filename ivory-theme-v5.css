@@ -1,0 +1,60 @@
+/* One warm ivory, deep teal and antique-gold palette throughout the invitation. */
+:root{--bg:#f4ecdb;--deep:#f4ecdb;--gold:#846631;--bright:#18383e;--text:#1a383d;--muted:#5f6d64;--line:#987a4540}
+html,body,#site,main{background:#f4ecdb;color:#1a383d}
+body{color:#1a383d}p{color:#5f6d64}h2,h3{color:#1a383d}
+header{background:linear-gradient(#f4ecdbf0,#f4ecdba6);border-color:#987a4540;backdrop-filter:blur(8px)}
+.brand{color:#18383e}.brand span{color:#98773c}.brand small{color:#5f6d64}
+nav a{color:#4f635d}nav a:hover{color:#81632f}
+.languages{border-color:#ad8e505c;background:#f7f0e24d}.lang{color:#3e5b59}.lang.active{background:#d7bd86;color:#18383e}
+.eyebrow,.tiny{color:#81632f}.section-number{color:#7b693f;border-color:#987a4540}
+.gold-button{background:linear-gradient(115deg,#c2a062,#e2c995 48%,#b99654);color:#18383e;box-shadow:inset 0 1px #fff8,0 8px 25px #765a281c}
+.gold-button:hover{background:#e7d4aa;color:#18383e}
+.outline-button,.hero .outline-button{color:#26434a;background:#f4ecdbb3;border-color:#a589515c}
+.outline-button:hover{background:#eadfc8;border-color:#98773c}
+.text-button{color:#81632f;border-color:#987a4566}.text-button:hover{color:#18383e}
+.hero-bg{background:linear-gradient(#f4ecdb08,transparent 65%,#f4ecdb),url(assets/ivory-temple.webp) center/cover;opacity:1}
+.hero-bg:after{background:none}
+.hero .eyebrow{color:#80652f}.hero h1{color:#18383e;text-shadow:none}
+.hero h1>span{background:linear-gradient(105deg,#18383e 20%,#36585b 45%,#18383e 68%,#2d4e51 85%);background-size:240% auto;background-clip:text;-webkit-background-clip:text;color:transparent;text-shadow:none}
+.hero h1 em{color:#98773c}.hero-sub{color:#37544e}.event-line{color:#806b43}
+.scroll-note{color:#81632f}.hero-side{color:#8c7954;opacity:.7}
+.ganesha{filter:drop-shadow(0 4px 8px #b18b3926)}
+.countdown-section,.invitation-section,.celebration-section,.family-section,.quote-section,.guide-section,.thanks-section{background:#f4ecdb}
+.countdown strong{background:linear-gradient(#f9f0de 49.5%,#eaddc1 50.5%);color:#18383e;border-color:#ad8e5052;box-shadow:0 8px 20px #725b2820,inset 0 1px #fff9}
+.countdown strong:after{background:#987a4540}.countdown span{color:#5f6d64}.countdown>i{color:#987a4580}
+.event-card{background:linear-gradient(120deg,#f9f1e1,#eee1c7);border-color:#987a4540;box-shadow:0 24px 60px #725b2814}
+.date-block{background:#b4965c0b;border-color:#987a4540}.date-block>strong,.date-block>span.time{color:#18383e}.date-block>span:not(.eyebrow){color:#81632f}
+.venue-art{background:radial-gradient(ellipse at 50% 40%,#c4a36320,transparent 70%),linear-gradient(160deg,#f9f1e0,#eee1c6);border-color:#987a4540;box-shadow:15px 20px 0 #b99b5a0c}
+.venue-art:after{border-color:#987a4540}.venue-arch{background:linear-gradient(#f9f2e3,#eadabb);border-color:#a88a4d8c;box-shadow:0 0 0 7px #b99b5a0b,0 0 0 8px #b99b5a35,inset 0 0 45px #c4a3631a}
+.venue-arch span{color:#92713b;filter:drop-shadow(0 3px 4px #876a2d25)}.location-note{color:#63705f}
+.family-card{background:linear-gradient(150deg,#fbf4e5,#eee1c7);border-color:#987a4540;box-shadow:0 20px 45px #765a2812}
+.family-icon{color:#98773c;border-color:#b19a6566;background:#f4ecdb30}.family-join{color:#98773c}.parent-space small{color:#63705f}
+.parent-space span{border-color:#a98b4d55}.quote-section{border-color:#987a4540}.quote-section blockquote{color:#18383e}
+.ride-links>a{background:linear-gradient(150deg,#fbf4e5,#eee1c7);border-color:#987a4540;color:#1a383d;box-shadow:0 5px 12px #765a2806}
+.ride-links>a:hover{background:#eaddc2;border-color:#98773c}.ride-links span{color:#98773c}
+.essential h4{color:#18383e}.essential b{color:#98773c}.guide-index{color:#98773c}
+.scratch-card{border-color:#b49a61;box-shadow:0 26px 50px #765a2818,0 0 0 6px #b99b5a0c,0 0 0 7px #b99b5a24}
+.scratch-content{background:#f4ecdb}.scratch-actions p{color:#5f6d64}.scratch-actions .text-button{color:#81632f}
+dialog{background:#f4ecdb;color:#18383e;border-color:#b79a5a8c;box-shadow:0 0 0 6px #d2b27622,0 30px 80px #67542c40}
+dialog::backdrop{background:#74613d52;backdrop-filter:blur(6px)}
+.letter-inner{border-color:#987a4540}.letter-inner p{color:#536b5f}
+#toast{background:#f4ecdb;color:#18383e;box-shadow:0 8px 24px #725b2820;border-color:#98773c}
+.floating-feather{opacity:.2;filter:drop-shadow(2px 5px 10px #735c2020)}.floating-feather.second{opacity:.15}.floating-feather.third{opacity:.12}
+#entrance{background:#f4ecdb}
+#entrance:before{background:linear-gradient(90deg,#f4ecdb78,transparent 40%,#f4ecdb58),linear-gradient(#f4ecdb2b,#f4ecdb47),url(assets/ivory-temple.webp) center/cover;filter:brightness(1);opacity:1}
+#entrance:after{background:radial-gradient(ellipse at 50% 42%,transparent 20%,#f4ecdb22 68%,#eadcc43d)}
+#entrance.opening:before{filter:brightness(1)}
+#entrance .entry-top>.tiny,#entrance .entry-intro>.tiny{color:#81632f}
+#entrance .entry-names{color:#18383e;text-shadow:none}
+#entrance .entry-caption{color:#5f6d64}#entrance .intro-skip{color:#81632f}
+#entrance .entry-frame{box-shadow:0 24px 50px #5d431d44,0 0 0 3px #6a4b2326,inset 0 0 0 2px #8d6e3540,inset 0 0 10px 7px #0007}
+#entrance .entry-threshold{box-shadow:0 10px 15px #5d431d44}
+#entrance .entry-reveal{background:#f4ecdb;box-shadow:inset 0 0 25px #5e482c38}
+#entrance .entry-sanctuary{background:linear-gradient(#f4ecdb20,#f4ecdb05,#f4ecdb35),url(assets/ivory-temple.webp) center/auto 100%;filter:brightness(1)}
+#entrance.opening .entry-sanctuary{filter:brightness(1)}
+#entrance .entry-reveal-copy .tiny{color:#81632f}#entrance .reveal-name{color:#18383e;text-shadow:none}#entrance .entry-reveal-copy>em{color:#98773c}
+#entrance #openDoors{background:linear-gradient(130deg,#c09d5c,#dec58e 48%,#b79452);color:#18383e;box-shadow:0 7px 23px #765a2826,inset 0 1px #fff7}
+#thanks{background:#f4ecdb}
+@media(max-width:700px){.hero-bg{opacity:1}.hero-bg:after{background:linear-gradient(90deg,#f4ecdb08,transparent 30%,transparent 70%,#f4ecdb08)}.floating-feather{opacity:.18}.floating-feather.second{opacity:.14}}
+
+#thanks{--gold:#846631;--muted:#5f6d64}#thanks .thanks-text{color:#5f6d64}#thanks .thanks-copy .eyebrow{color:#81632f}#thanks .section-number{color:#7b693f}

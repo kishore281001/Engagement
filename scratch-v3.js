@@ -1,0 +1,25 @@
+/* Actual erase-to-reveal interaction, supporting mouse, pen and touch. */
+(()=>{
+ const card=document.getElementById('scratchCard'),canvas=document.getElementById('scratchFoil'),content=card.querySelector('.scratch-content'),ctx=canvas.getContext('2d',{willReadFrequently:true}),revealButton=document.getElementById('revealScratch'),resetButton=document.getElementById('resetScratch');
+ let width=0,height=0,ratio=1,revealed=false,drawing=false,last=null,paths=[],currentPath=null;
+ if(!ctx){reveal();resetButton.hidden=true;return}
+ function tamil(){return document.documentElement.lang==='ta'}
+ function wrap(text,x,y,maxWidth,lineHeight){const words=text.split(' ');let line='',lines=[];for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>maxWidth&&line){lines.push(line);line=word}else line=test}lines.push(line);lines.forEach((l,i)=>ctx.fillText(l,x,y+i*lineHeight));return lines.length}
+ function drawBase(){if(!width||!height)return;ctx.setTransform(ratio,0,0,ratio,0,0);ctx.globalCompositeOperation='source-over';ctx.clearRect(0,0,width,height);const gold=ctx.createLinearGradient(0,0,width,height);[[0,'#a77f3e'],[.18,'#d8bd7e'],[.36,'#e2c991'],[.52,'#c0a05f'],[.72,'#ddc28b'],[1,'#9f793c']].forEach(s=>gold.addColorStop(...s));ctx.fillStyle=gold;ctx.fillRect(0,0,width,height);
+ // Fine, deterministic foil grain; no external texture or image dependency.
+ let seed=6127;const random=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};for(let i=0;i<width*height*.23;i++){const x=random()*width,y=random()*height;ctx.fillStyle=random()>.5?'rgba(255,244,202,.085)':'rgba(75,49,12,.075)';ctx.fillRect(x,y,random()*1.3+.2,.6)}
+ ctx.strokeStyle='rgba(83,57,19,.32)';ctx.lineWidth=1;ctx.strokeRect(13.5,13.5,width-27,height-27);ctx.strokeStyle='rgba(255,241,198,.42)';ctx.strokeRect(16.5,16.5,width-33,height-33);ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#6c512a';ctx.font='italic 54px "Cormorant Garamond", Georgia, serif';ctx.fillText('N & A',width/2,height*.30);ctx.beginPath();ctx.moveTo(width*.38,height*.43);ctx.lineTo(width*.62,height*.43);ctx.strokeStyle='#80613377';ctx.stroke();ctx.fillStyle='#614922';ctx.font=tamil()?'400 19px "Noto Serif Tamil", serif':'italic 31px "Cormorant Garamond", Georgia, serif';wrap(tamil()?'தேய்த்து அழைப்பிதழைக் காணுங்கள்':'Scratch to reveal',width/2,height*.56,width-48,tamil()?32:36);ctx.fillStyle='#795d32';ctx.font=tamil()?'400 10px "Noto Serif Tamil", serif':'500 9px Manrope, sans-serif';wrap(tamil()?'உங்களுக்கான ஓர் அன்பான அழைப்பு':'AN INVITATION, JUST FOR YOU',width/2,height*.77,width-50,19);
+ paths.forEach(path=>{for(let i=0;i<path.length;i++)erase(path[i],i?path[i-1]:null)});ctx.globalCompositeOperation='source-over';
+ }
+ function erase(p,prev){ctx.setTransform(ratio,0,0,ratio,0,0);ctx.globalCompositeOperation='destination-out';ctx.globalAlpha=1;ctx.strokeStyle='#000';ctx.fillStyle='#000';ctx.lineWidth=Math.max(37,width*.115);ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();if(prev){ctx.moveTo(prev.x*width,prev.y*height);ctx.lineTo(p.x*width,p.y*height);ctx.stroke()}else{ctx.arc(p.x*width,p.y*height,ctx.lineWidth/2,0,Math.PI*2);ctx.fill()}}
+ function point(e){const r=canvas.getBoundingClientRect();return{x:Math.max(0,Math.min(1,(e.clientX-r.left)/r.width)),y:Math.max(0,Math.min(1,(e.clientY-r.top)/r.height))}}
+ function reveal(){revealed=true;drawing=false;card.classList.add('is-revealed');content.inert=false;revealButton.hidden=true;resetButton.hidden=false;canvas.setAttribute('aria-label',tamil()?'அழைப்பிதழ் திறக்கப்பட்டது':'Invitation revealed')}
+ function coverage(){const data=ctx.getImageData(0,0,canvas.width,canvas.height).data;let total=0,clear=0;for(let i=3;i<data.length;i+=4*53){total++;if(data[i]<128)clear++}if(clear/total>.36)reveal()}
+ canvas.addEventListener('pointerdown',e=>{if(revealed||e.button>0)return;e.preventDefault();drawing=true;canvas.setPointerCapture(e.pointerId);last=point(e);currentPath=[last];paths.push(currentPath);erase(last,null)});
+ canvas.addEventListener('pointermove',e=>{if(!drawing||revealed)return;e.preventDefault();const p=point(e);currentPath.push(p);erase(p,last);last=p});
+ function end(){if(!drawing)return;drawing=false;last=null;coverage()}
+ canvas.addEventListener('pointerup',end);canvas.addEventListener('pointercancel',end);canvas.addEventListener('lostpointercapture',end);
+ revealButton.addEventListener('click',reveal);resetButton.addEventListener('click',()=>{revealed=false;paths=[];card.classList.remove('is-revealed');content.inert=true;revealButton.hidden=false;resetButton.hidden=true;drawBase();revealButton.focus({preventScroll:true})});
+ function resize(){const r=card.getBoundingClientRect();width=card.clientWidth;height=card.clientHeight;ratio=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);drawBase()}
+ new ResizeObserver(resize).observe(card);document.addEventListener('invitationlanguagechange',()=>requestAnimationFrame(resize));document.fonts.ready.then(resize);resize();
+})();

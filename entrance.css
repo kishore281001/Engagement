@@ -1,0 +1,68 @@
+/* Photographic carved timber, physical door edges, restrained cinematic light. */
+#entrance{background:#05181b;gap:0;isolation:isolate;transition:opacity .9s ease;perspective:1500px;justify-content:center;padding:70px 20px 28px}
+#entrance:before{inset:-3%;background:linear-gradient(90deg,#020d12a8,transparent 40%,#020d1270),linear-gradient(#04151975,#061c2070),url(assets/temple.webp) center/cover;opacity:1;transform:scale(1.01);transition:transform 5.2s cubic-bezier(.25,.05,.2,1),filter 4s;filter:brightness(.6);z-index:-2}
+#entrance:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,transparent 15%,#020e1560 67%,#020b10a6);pointer-events:none;z-index:-1}
+#entrance .entry-top{top:24px;z-index:10}
+#entrance .entry-top>.tiny{font-size:8px;color:#c9b790;letter-spacing:2.5px}
+#entrance .entry-intro{position:relative;text-align:center;z-index:5;margin:0 0 22px;transition:opacity .55s,transform .7s}
+#entrance .entry-names{font:italic 34px/1.2 'Cormorant Garamond',Georgia,serif;color:#efe0bf;text-shadow:0 3px 12px #0008;margin:0 0 8px}
+#entrance .entry-intro>.tiny{font-size:8px;letter-spacing:3px;color:#b9a67c}
+#entrance .entry-scene{position:relative;perspective:1400px;transform-style:preserve-3d}
+#entrance .gateway{position:relative;width:min(76vw,40svh,420px);height:auto;min-height:0;aspect-ratio:2/3;max-height:none;margin:0;perspective:1400px;transform-style:preserve-3d;transform:translateZ(0);transition:transform 4.8s cubic-bezier(.3,.03,.2,1);will-change:transform}
+#entrance .entry-frame{position:absolute;inset:-17px;background:linear-gradient(90deg,#20190ed9,#523e2270 2%,#342713ab 5%,#6d5227a8 50%,#251b0c99 95%,#6b522c99 98%,#17130ce8),url(assets/carved-temple-doors.webp) center/100% 100%;border:4px solid #2d2418;outline:1px solid #b28a4340;border-radius:1px;box-shadow:0 30px 70px #000b,0 0 0 3px #110f0aa8,inset 0 0 0 2px #8d6e3540,inset 0 0 10px 7px #0009;transform:translateZ(-9px)}
+#entrance .entry-frame:before{content:'';position:absolute;inset:7px;border:2px solid #81673755;box-shadow:inset 0 0 0 2px #100e0a,0 0 0 1px #b58c4833;pointer-events:none}
+#entrance .entry-threshold{position:absolute;bottom:-24px;height:18px;left:-22px;right:-22px;background:linear-gradient(#87714d,#342e22 30%,#1b1d17 75%,#070f10);box-shadow:0 12px 17px #000b;border-top:1px solid #b2966266;transform:translateZ(3px);z-index:4}
+#entrance .doorway{inset:0;position:absolute;background:#0c1717;border-radius:0;box-shadow:inset 0 0 30px 8px #000c;transform-style:preserve-3d;overflow:visible}
+#entrance .entry-reveal{position:absolute;inset:0;overflow:hidden;background:#05191e;transform:translateZ(-24px);box-shadow:inset 0 0 25px #000;isolation:isolate}
+#entrance .entry-sanctuary{position:absolute;inset:0;background:linear-gradient(#03171c40,#03171c05,#03171c55),url(assets/temple.webp) center/auto 100%;filter:brightness(.65);transform:scale(1.06);transition:transform 4s,filter 4s}
+#entrance .entry-reveal-copy{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:25px 10px;opacity:.2;filter:blur(2px);transform:scale(.88);transition:opacity 2.7s .5s,filter 2.7s .5s,transform 4s .4s}
+#entrance .entry-reveal-copy>img{width:45px;height:56px;object-fit:contain;margin-bottom:24px;filter:drop-shadow(0 0 10px #d9ad4c40)}
+#entrance .entry-reveal-copy .tiny{font-size:6px;letter-spacing:2px;color:#e1c793;margin-bottom:30px}
+#entrance .reveal-name{font:400 clamp(30px,5svh,60px)/1.15 'Cormorant Garamond',Georgia,serif;color:#f4e0b5;text-shadow:0 2px 10px #0009}
+#entrance .entry-reveal-copy>em{font:italic 27px 'Cormorant Garamond',Georgia,serif;color:#c2a369;margin:5px 0}
+#entrance .door{position:absolute;inset:0 auto 0 0;width:50%;height:100%;border:0;border-radius:0;background:none;box-shadow:none;transform-style:preserve-3d;backface-visibility:visible;filter:none;transition:transform 3.55s cubic-bezier(.35,.035,.18,1);z-index:3;will-change:transform}
+#entrance .door.left{left:0;right:auto;transform-origin:0% 50%;transform:rotateY(0)}
+#entrance .door.right{left:50%;right:auto;transform-origin:100% 50%;transform:rotateY(0);transition-delay:.16s}
+#entrance .door:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#1c140bf0,#3f2c15a8,#20170df0),url(assets/carved-temple-doors.webp) center/200% 100%;transform:translateZ(-15px) rotateY(180deg);backface-visibility:hidden;box-shadow:inset 0 0 15px #0009;border:0;border-radius:0}
+#entrance .door:after{content:none}
+#entrance .door-face{position:absolute;inset:0;background-image:url(assets/carved-temple-doors.webp);background-size:200% 100%;background-repeat:no-repeat;backface-visibility:hidden;transform:translateZ(.5px);box-shadow:inset 0 0 9px #0005}
+#entrance .left .door-face{background-position:left center}
+#entrance .right .door-face{background-position:right center}
+#entrance .door-edge{position:absolute;top:0;bottom:0;width:15px;background:linear-gradient(90deg,#120e08,#544024 25%,#2d2111 65%,#8e6d34 85%,#22190c);transform-origin:left center;transform:rotateY(90deg);box-shadow:inset 0 0 0 1px #140e07}
+#entrance .left .door-edge{left:100%}
+#entrance .right .door-edge{left:0}
+#entrance .door-shade{position:absolute;inset:0;background:linear-gradient(90deg,#0006,transparent 40%,#000b);opacity:0;pointer-events:none;transform:translateZ(1px);backface-visibility:hidden;transition:opacity 3.5s}
+#entrance .right .door-shade{background:linear-gradient(90deg,#000b,transparent 70%,#0006)}
+#entrance .hinge{position:absolute;width:7px;height:27px;border-radius:2px;background:linear-gradient(90deg,#17150e,#69532d 30%,#ad8b49 48%,#534226 70%,#14130e);box-shadow:1px 2px 5px #0009;transform:translateZ(3px);backface-visibility:hidden}
+#entrance .left .hinge{left:-4px}#entrance .right .hinge{right:-4px}
+#entrance .hinge.h1{top:12%}#entrance .hinge.h2{top:47%}#entrance .hinge.h3{top:82%}
+#entrance .entry-contact-shadow{position:absolute;inset:-1px;box-shadow:inset 0 7px 14px #0007,inset 0 -3px 8px #0008;pointer-events:none;transform:translateZ(3px);z-index:4;opacity:.8;transition:opacity 1.2s .3s}
+#entrance .entry-control{position:relative;z-index:6;display:flex;flex-direction:column;align-items:center;margin:44px 0 0;gap:17px;transition:opacity .45s,transform .6s}
+#entrance #openDoors{border:1px solid #bb975a8c;background:linear-gradient(130deg,#ad8a4e,#d2b277 48%,#a38143);color:#152328;box-shadow:0 7px 23px #0007,inset 0 1px #f7e8c444;padding:13px 28px;font-size:10px;letter-spacing:.6px;transition:filter .25s,transform .25s;min-height:44px}
+#entrance #openDoors:hover{filter:brightness(1.12);transform:translateY(-2px)}
+#entrance .entry-caption{position:static;margin:0;font:italic 16px/1.5 'Cormorant Garamond',Georgia,serif;color:#b4a484}
+#entrance .intro-skip{position:absolute;right:28px;bottom:25px;z-index:12;background:none;color:#bcad8e;font-size:10px;padding:10px 4px;opacity:0;pointer-events:none;transition:opacity .7s 1s;letter-spacing:.5px}
+#entrance .entry-dust{position:absolute;inset:0;pointer-events:none;z-index:8;overflow:hidden}
+#entrance .door-dust{position:absolute;width:var(--size);height:var(--size);background:#e3c48b;border-radius:50%;box-shadow:0 0 3px #d3ad6455;opacity:0;animation:templeDust 3s ease-out forwards}
+#entrance.opening .door.left{transform:rotateY(103deg);filter:none}
+#entrance.opening .door.right{transform:rotateY(-106deg);filter:none}
+#entrance.opening .door-shade{opacity:.85}
+#entrance.opening .gateway{transform:translateZ(0) scale(1.11)}
+#entrance.opening:before{transform:scale(1.065);filter:brightness(.8)}
+#entrance.opening .entry-intro{opacity:0;transform:translateY(-9px)}
+#entrance.opening .entry-control{opacity:0;transform:translateY(8px);pointer-events:none}
+#entrance.opening .entry-reveal-copy{opacity:1;filter:blur(0);transform:scale(1)}
+#entrance.opening .entry-sanctuary{transform:scale(1);filter:brightness(.9)}
+#entrance.opening .entry-contact-shadow{opacity:.15}
+#entrance.opening .intro-skip{opacity:1;pointer-events:auto}
+#entrance.done{opacity:0;pointer-events:none}
+#entrance[hidden]{display:none}
+@keyframes templeDust{0%{opacity:0;transform:translate3d(0,0,0)}15%{opacity:.65}100%{opacity:0;transform:translate3d(var(--dx),var(--dy),0)}}
+html[lang=ta] #entrance .entry-names{font:400 23px/1.6 'Noto Serif Tamil',serif;letter-spacing:0}
+html[lang=ta] #entrance .entry-caption{font:400 11px/1.8 'Noto Serif Tamil',serif;letter-spacing:0}
+html[lang=ta] #entrance .reveal-name{font:400 clamp(21px,3.5svh,37px)/1.8 'Noto Serif Tamil',serif}
+html[lang=ta] #entrance .entry-reveal-copy .tiny{letter-spacing:0;font-size:8px}
+@media(min-width:1600px){#entrance:before{background-size:cover}}
+@media(max-width:700px){#entrance{padding:75px 20px 28px}#entrance .entry-top{top:18px;left:24px;right:24px}#entrance .entry-top>.tiny{font-size:6px;letter-spacing:1.5px;max-width:175px}#entrance .entry-intro{margin-bottom:23px}#entrance .entry-names{font-size:29px}#entrance .entry-intro>.tiny{font-size:7px;letter-spacing:2.5px}#entrance .gateway{width:min(75vw,39svh,365px)}#entrance .entry-frame{inset:-13px;border-width:3px}#entrance .entry-threshold{bottom:-20px;left:-17px;right:-17px;height:15px}#entrance .entry-control{margin-top:36px;gap:17px}#entrance .entry-caption{font-size:15px}#entrance .entry-reveal-copy>img{width:34px;height:43px;margin-bottom:19px}#entrance .entry-reveal-copy .tiny{font-size:5px;margin-bottom:25px;letter-spacing:1.5px}#entrance .intro-skip{right:22px;bottom:13px;font-size:9px}#entrance .hinge{height:20px;width:6px}html[lang=ta] #entrance .entry-names{font-size:20px}html[lang=ta] #entrance .entry-caption{font-size:10px}}
+@media(max-height:650px){#entrance{padding-top:58px;padding-bottom:15px}#entrance .entry-intro{margin-bottom:14px}#entrance .entry-names{font-size:26px}#entrance .gateway{width:min(64vw,37svh,350px)}#entrance .entry-control{margin-top:28px;gap:10px}#entrance .entry-caption{font-size:13px}#entrance #openDoors{padding:10px 22px;min-height:38px}#entrance .entry-top{top:13px}html[lang=ta] #entrance .entry-names{font-size:18px}}
+@media(prefers-reduced-motion:reduce){#entrance .gateway,#entrance:before,#entrance .door,#entrance .entry-intro,#entrance .entry-control{transition:none!important}#entrance .door-dust{display:none}}
