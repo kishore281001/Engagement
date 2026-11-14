@@ -13,9 +13,8 @@
  .event-details{padding:28px 22px}.event-details h3{font-size:34px;line-height:1.15}.date-block{padding:25px 20px}.date-block>strong{font-size:76px}.venue{gap:28px}.venue h3{font-size:33px;overflow-wrap:break-word}.venue-art{width:100%;transform:none;height:210px;box-shadow:6px 8px 0 #b99b5a0c}
  .gold-button,.outline-button,.text-button{min-height:44px;align-content:center;font-size:12px}.button-row{gap:16px}.location-note{font-size:11px}
  .scratch-unit{width:calc(100% - 10px)}.scratch-content{padding:24px 18px;min-height:350px}.scratch-actions{flex-wrap:wrap;gap:7px}.scratch-actions p{max-width:100%;font-size:11px}.scratch-actions .text-button{font-size:11px;min-height:44px}
- .family-card{padding:28px 22px}.family-card h3{font-size:34px}.family-heading{margin-bottom:30px}.family-grid{gap:17px}.family-join{height:29px;line-height:29px}.parent-details{margin-top:23px}
- .quote-section blockquote{font-size:31px}.quote-section .eyebrow{font-size:8px;letter-spacing:.8px}.guide-grid h3{font-size:30px;line-height:1.2}.guide-title{gap:20px}.travel-card,.details-card{padding-top:25px}.ride-links{gap:10px}.ride-links>a{padding:15px 12px;min-height:86px;align-items:center;gap:6px}.ride-label{min-width:0}.ride-links .ride-label strong{font-size:19px}.ride-links .ride-label small{font-size:10px;line-height:1.55;overflow-wrap:anywhere}.travel-card .small{font-size:12px;line-height:1.8}.essential{gap:15px}.essential>div{min-width:0}.essential h4{font-size:15px}
- #thanks{padding-bottom:0}#thanks .thanks-copy h2{font-size:37px}#thanks .hands-stage{width:100%;margin:28px auto;padding:4px}#thanks .replay{width:44px;height:44px;bottom:10px;right:10px;font-size:24px}#thanks .thanks-text{font-size:14px}.signature{font-size:31px}.thanks-section .outline-button{margin-bottom:48px}footer{font-size:10px;letter-spacing:.6px}footer span:nth-child(2){font-size:8px;letter-spacing:1px}
+ .family-card{padding:20px 16px 18px}.family-card h3{font-size:28px}.family-heading{margin-bottom:30px}.family-grid{gap:17px}.family-join{height:29px;line-height:29px}.family-icon{width:86px;height:86px;font-size:34px;margin:0 auto 10px}.parent-details{margin-top:23px}.parent-details strong{font-size:20px}
+ .quote-section blockquote{font-size:31px}.quote-section .eyebrow{font-size:8px;letter-spacing:.8px}.guide-grid h3{font-size:30px;line-height:1.2}.guide-title{gap:20px}.travel-card,.details-card{padding-top:25px} .ride-links{gap:8px}.ride-links>a{padding:10px 12px;min-height:64px;align-items:center;gap:6px;border-radius:12px}.ride-label{min-width:0}.ride-links .ride-label strong{font-size:16px;line-height:1.2}.ride-links .ride-label small{font-size:9px;line-height:1.45;overflow-wrap:anywhere}.travel-card .small{font-size:12px;line-height:1.8}.essential{gap:12px}.essential>div{min-width:0}.essential b{display:none}.essential h4{font-size:15px} #thanks{padding-bottom:0}#thanks .thanks-copy h2{font-size:37px}#thanks .hands-stage{width:100%;margin:28px auto;padding:4px}#thanks .replay{width:44px;height:44px;bottom:10px;right:10px;font-size:24px}#thanks .thanks-text{font-size:14px}.signature{font-size:31px}.thanks-section .outline-button{margin-bottom:48px}footer{font-size:10px;letter-spacing:.6px}footer span:nth-child(2){font-size:8px;letter-spacing:1px}
  dialog{width:calc(100vw - 28px);max-height:calc(100svh - 28px);margin:auto;padding:20px 12px}#closeLetter{min-width:44px;min-height:44px;right:3px;top:0}.letter-inner{padding:27px 14px 20px}.letter-inner h2,.letter-inner h3{font-size:28px}.letter-inner p{font-size:14px}.letter-inner .eyebrow{font-size:9px;letter-spacing:.7px}
  #toast{width:max-content;max-width:calc(100% - 32px);bottom:max(20px,env(safe-area-inset-bottom));font-size:12px;padding:12px 16px}
  #entrance{width:100%;height:100%;padding:0}#entrance .entry-top>.tiny{max-width:155px;font-size:7px;letter-spacing:1.3px}#entrance .entry-intro{top:22%}#entrance .entry-control{top:68%;gap:19px}#entrance .entry-caption{font-size:18px;max-width:290px}#entrance .intro-skip{min-height:44px;bottom:max(10px,env(safe-area-inset-bottom))}
@@ -31,3 +30,48 @@ html[lang=ta] .name-cap{font:inherit}
 .hero h1{font-size:clamp(64px,7vw,106px)}
 @media(max-width:700px){.hero h1{font-size:clamp(54px,15vw,68px)}}
 @media(max-width:700px){html{overflow-x:clip;scrollbar-width:none}html::-webkit-scrollbar{display:none}body>div[aria-hidden=true]{position:fixed;inset:0;overflow:clip;pointer-events:none;z-index:6}.family-section{overflow:clip}}
+
+.engagement-arch{display:contents}
+@media(max-width:700px){
+#countdown,.quote-section{display:none!important}
+#invitation,#guide{display:block!important}
+#invitation>.section-number,#invitation .invitation-copy,#guide>.section-number,#guide .guide-title,#guide .details-card,#guide .travel-card .small{display:none!important}
+.celebration-section{padding:22px 16px 30px;background:radial-gradient(ellipse at 50% 0,#e7d5b3 0,transparent 58%),#f4ecdb}
+ .celebration-section>.section-number,.celebration-heading{display:none}
+ .engagement-arch{display:block;position:relative;isolation:isolate;overflow:hidden;width:min(100%,520px);margin:0 auto 12px;padding:48px 18px 22px;border:1px solid #aa8748;border-radius:48% 48% 10px 10px/7% 7% 10px 10px;background:linear-gradient(180deg,#f8eedcde,#f4ebdbeF),url(assets/temple.webp) center 42%/cover;box-shadow:0 18px 40px #6d51251a,inset 0 0 35px #b18b4520}
+ .engagement-arch:before{content:'';position:absolute;inset:7px;z-index:0;border:1px solid #b89a5c66;border-radius:inherit;pointer-events:none}
+ .engagement-arch:after{content:'✧  ✦  ✧';position:absolute;z-index:1;top:12px;left:0;right:0;text-align:center;font-size:13px;letter-spacing:5px;color:#98773c;pointer-events:none}
+ .engagement-arch>*{position:relative;z-index:1}
+ .event-card{display:flex;flex-direction:column;gap:0;max-width:none;margin:0;border:0;background:transparent;box-shadow:none;transform:none}
+ .date-block{padding:0 8px 11px;border:0;background:transparent}
+ .date-block>.eyebrow{font-size:8px;letter-spacing:2px}
+ .date-block>strong{margin:0;font-size:clamp(62px,17vw,76px);line-height:1.05}
+ .date-block>span:not(.eyebrow){font-size:9px;letter-spacing:1.5px}
+ .date-block>span.time{margin-top:4px;font-size:24px;letter-spacing:0}
+ .date-block>small{font-size:8px}
+ .date-rule{margin:8px auto}
+ .event-details{padding:0;text-align:center;background:transparent}
+ .event-details>.tiny,.event-details>h3,.event-details>p{display:none}
+ #calendar{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin:0;padding:9px 16px;border:1px solid #98773c80}
+ .venue{display:block;max-width:none;margin:13px auto 0;text-align:center}
+ .venue-art,.venue .location-note{display:none}
+ .venue .eyebrow{margin-bottom:5px;font-size:8px;letter-spacing:2px}
+ .venue h3{max-width:290px;margin:0 auto;font-size:clamp(22px,6vw,27px);line-height:1.2}
+ .venue>div:last-child>p:not(.eyebrow){max-width:290px;margin:7px auto 0;font-size:11px;line-height:1.55}
+ .venue .button-row{justify-content:center;gap:8px;margin-top:11px}
+ .venue .gold-button,.venue .copy-address{min-height:44px;padding:9px 12px;font-size:10px}
+ .family-section{padding:28px 16px 36px}
+ .family-section>.section-number{display:none}
+ .family-heading{margin-bottom:16px;text-align:center}
+ .family-heading>.eyebrow{display:none}
+ .family-heading h2{font-size:23px;line-height:1.2}
+ .family-grid{grid-template-columns:1fr 1fr;align-items:stretch;gap:10px}
+ .family-card{padding:18px 10px;text-align:center}
+ .family-card h3{font-size:24px}
+ .family-card>p:not(.eyebrow){display:none}
+ .family-join{display:none}
+ .parent-details{gap:9px;margin-top:12px}
+ .parent-details .parent-row+.parent-row{padding-top:8px}
+ .parent-details strong{font-size:16px}
+ html[lang=ta] .parent-details strong{font-size:13px}
+}
