@@ -26,6 +26,6 @@
   }else throw new Error('Unknown travel provider: '+name);
   return {name,href,webUrl,nativeUrl,mode,hasPin:pin};
  }
- function calendar(config){const q=new URLSearchParams({action:'TEMPLATE',text:'P. Natarajan & Aarthi E · Engagement',dates:'20261122T043000Z/20261122T043000Z',ctz:'Asia/Kolkata',location:config.venue.address,details:'With the blessings of our families, please join us on Sunday, 22 November 2026 at 10:00 AM IST.\nVenue: '+config.venue.name+'\n'+maps(config)+'\nCeremony end time is not specified.'});return 'https://calendar.google.com/calendar/render?'+q}
+ function calendar(config){const q=new URLSearchParams({action:'TEMPLATE',text:'P. Natarajan & E Aarthi · Engagement',dates:'20261122T043000Z/20261122T043000Z',ctz:'Asia/Kolkata',location:config.venue.address,details:'With the blessings of our families, please join us on Sunday, 22 November 2026 at 10:00 AM IST.\nVenue: '+config.venue.name+'\n'+maps(config)+'\nCeremony end time is not specified.'});return 'https://calendar.google.com/calendar/render?'+q}
  root.InvitationTravel={hasPin,maps,provider,androidIntent,calendar};
 })(typeof window!=='undefined'?window:globalThis);
